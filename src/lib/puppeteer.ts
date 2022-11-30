@@ -14,25 +14,17 @@ const exePath =
 
 async function getOptions(isDev: boolean) {
   let options;
-  const args = [
-    '--no-sandbox',
-    '--disable-setuid-sandbox',
-    '--disable-gpu',
-    '--disable-dev-shm-usage'
-  ];
   if (isDev) {
     options = {
-      args,
+      args: [],
       executablePath: exePath,
-      headless: true,
-      ignoreHTTPSErrors: true
+      headless: true
     };
   } else {
     options = {
-      args: [...chrome.args, ...args],
+      args: chrome.args,
       executablePath: await chrome.executablePath,
-      headless: chrome.headless,
-      ignoreHTTPSErrors: true
+      headless: chrome.headless
     };
   }
   return options;

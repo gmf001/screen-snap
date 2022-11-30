@@ -17,7 +17,7 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
       if (error instanceof ZodError) {
         return res.status(422).json(error.issues);
       }
-      return res.status(500).end();
+      return res.status(500).end('The server encountered an error.');
     }
   }
 }
