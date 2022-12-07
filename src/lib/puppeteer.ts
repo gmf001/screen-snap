@@ -51,7 +51,7 @@ export const screenshotSchema = z.object({
 export async function getScreenshot(body: Screenshot) {
   try {
     const page = await getPage();
-    await page.goto(body.url, { waitUntil: 'networkidle2' });
+    await page.goto(body.url, { waitUntil: 'domcontentloaded' });
     await page.setViewport({
       width: Number(body.width) || 1280,
       height: Number(body.height) || 720,
