@@ -46,7 +46,7 @@ function Home() {
         </div>
       </MainLayout>
 
-      <div className='fixed bottom-0 left-0 right-0 z-50 flex items-center justify-center border-t-2 border-gray-900 bg-pink-accent py-2'>
+      <div className='fixed bottom-0 left-0 right-0 z-50 flex items-center justify-center border-t-2 border-gray-900 bg-purple-accent py-2'>
         <div className='container flex w-full max-w-screen-lg items-center justify-between'>
           <div className='mb-2 flex w-full max-w-lg flex-col space-y-0'>
             <label
@@ -78,7 +78,7 @@ function Home() {
           </button>
           <button
             onClick={download}
-            className='w-full max-w-xs border-4 border-black bg-green-100 p-2.5 text-xl font-extrabold text-gray-900 shadow-offset-black hover:bg-green-200'
+            className='w-full max-w-xs border-4 border-black bg-green-200 p-2.5 text-xl font-extrabold text-gray-900 shadow-offset-black hover:bg-green-300'
           >
             Download
           </button>
