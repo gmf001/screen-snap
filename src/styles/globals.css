@@ -1,10 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300;400;500;600;700;800;900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   html {
-    @apply bg-dark font-sans text-white;
+    @apply bg-pink-accent font-sans text-white;
     color-scheme: dark;
+  }
+}
+
+@layer components {
+  .flex-center {
+    @apply flex items-center justify-center;
   }
 }

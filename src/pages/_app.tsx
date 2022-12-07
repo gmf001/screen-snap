@@ -8,9 +8,7 @@ function App({ Component, pageProps }: AppProps) {
       <Head>
         <title>ScreenSnap | Awesome website screenshots</title>
       </Head>
-      <main className='grid h-screen place-items-center'>
-        <Component {...pageProps} />
-      </main>
+      <Component {...pageProps} />
     </>
   );
 }
