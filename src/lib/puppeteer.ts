@@ -55,7 +55,7 @@ export async function getScreenshot(body: Screenshot) {
     await page.setViewport({
       width: Number(body.width) || 1280,
       height: Number(body.height) || 720,
-      deviceScaleFactor: 1
+      deviceScaleFactor: 2
     });
     const file = await page.screenshot();
     return file;

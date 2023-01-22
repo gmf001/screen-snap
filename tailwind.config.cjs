@@ -2,18 +2,22 @@
 module.exports = {
   content: ['./src/**/*.{js,ts,jsx,tsx}'],
   theme: {
+    container: {
+      center: true,
+      padding: '1rem',
+      screens: {
+        '2xl': '1440px'
+      }
+    },
     extend: {
       fontFamily: {
-        sans: ['Darker Grotesque', 'sans-serif']
+        sans: ['Cal Sans', 'sans-serif']
       },
       colors: {
-        black: '#232834',
-        'black-accent': '#34364b',
-        primary: '#db1d71',
-        'primary-accent': '#c01a63',
-        'green-accent': '#e8f1d7',
-        'purple-accent': '#a297e4',
-        'pink-accent': '#f8bed4'
+        dark: '#1f2023',
+        'dark-accent': '#27282b',
+        primary: '#a297e4',
+        'primary-accent': '#b2a8f4'
       },
       boxShadow: {
         'offset-black': '2px 2px black'

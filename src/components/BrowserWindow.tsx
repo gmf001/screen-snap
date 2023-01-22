@@ -28,14 +28,14 @@ function BrowserWindow({
     >
       <div
         className={clsx(
-          'flex h-11 w-full items-center justify-start space-x-1.5 px-3',
+          'flex h-6 w-full items-center justify-start space-x-1.5 px-3',
           colorMode === 'light' && 'bg-gray-200',
           colorMode === 'dark' && 'bg-gray-900'
         )}
       >
-        <span className='h-3 w-3 rounded-full bg-red-400'></span>
-        <span className='h-3 w-3 rounded-full bg-yellow-400'></span>
-        <span className='h-3 w-3 rounded-full bg-green-400'></span>
+        <span className='h-2.5 w-2.5 rounded-full bg-red-400'></span>
+        <span className='h-2.5 w-2.5 rounded-full bg-yellow-400'></span>
+        <span className='h-2.5 w-2.5 rounded-full bg-green-400'></span>
       </div>
       <div
         className={clsx(

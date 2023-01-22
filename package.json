@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@heroicons/react": "^2.0.13",
+    "cal-sans": "^1.0.1",
     "chrome-aws-lambda": "7.0.0",
     "clsx": "^1.2.1",
     "downloadjs": "^1.4.7",

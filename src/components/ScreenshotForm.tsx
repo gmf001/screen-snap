@@ -32,15 +32,21 @@ function ScreenshotForm({ setFile }: Props) {
   };
 
   return (
-    <form onSubmit={handleSubmit} className='w-full max-w-lg space-y-4'>
+    <form onSubmit={handleSubmit} className='relative h-full w-full max-w-lg'>
       <input
         value={url}
         onChange={(e) => setUrl(e.target.value)}
         disabled={isLoading}
         type='text'
         placeholder='Enter Website URL'
-        className='w-full rounded-lg border-2 border-black bg-white py-2.5 px-4 text-lg font-semibold text-black placeholder:text-black focus:outline-none focus:ring-0'
+        className='h-12 w-full rounded-lg border border-gray-700 bg-dark-accent py-1 px-4 text-sm font-semibold text-white placeholder:text-white focus:outline-none focus:ring-0'
       />
+      <button
+        type='submit'
+        className='absolute top-1/2 right-2 m-0 mt-0 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full bg-primary p-5 text-[11px] hover:bg-primary-accent'
+      >
+        <span>GO</span>
+      </button>
     </form>
   );
 }
