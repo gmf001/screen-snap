@@ -14,9 +14,9 @@ function BrowserWindow({
   return (
     <div
       className={clsx(
-        'absolute overflow-hidden rounded-lg border-2',
-        colorMode === 'light' && 'border-gray-200',
-        colorMode === 'dark' && 'border-gray-900',
+        'absolute flex flex-col overflow-hidden rounded rounded-b-sm border-[5px]',
+        colorMode === 'light' && 'border-gray-200 bg-gray-200',
+        colorMode === 'dark' && 'border-gray-900 bg-gray-900',
         padding === 0 && '!rounded-none !border-none'
       )}
       style={{
@@ -28,7 +28,7 @@ function BrowserWindow({
     >
       <div
         className={clsx(
-          'flex h-6 w-full items-center justify-start space-x-1.5 px-3',
+          'flex h-6 w-full items-center justify-start space-x-1.5 px-2',
           colorMode === 'light' && 'bg-gray-200',
           colorMode === 'dark' && 'bg-gray-900'
         )}
@@ -38,8 +38,9 @@ function BrowserWindow({
         <span className='h-2.5 w-2.5 rounded-full bg-green-400'></span>
       </div>
       <div
+        id='here'
         className={clsx(
-          'absolute h-full w-full overflow-hidden border-t-0',
+          'relative mt-1 w-full flex-grow overflow-hidden rounded border-t-0',
           colorMode === 'light' && 'bg-gray-100',
           colorMode === 'dark' && 'bg-gray-700'
         )}

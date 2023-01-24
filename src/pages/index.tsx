@@ -31,14 +31,14 @@ function Home() {
       <main className='container my-24 h-1/2 min-h-[650px] w-full max-w-5xl'>
         <div
           ref={window}
-          className='flex-center relative h-full w-full border border-gray-800 bg-dark-accent'
+          className='relative grid h-full w-full place-items-center border border-gray-800 bg-dark-accent'
         >
           <BrowserWindow colorMode={colorMode} padding={padding}>
             {file ? (
               <img
                 src={file}
                 alt='placeholder'
-                className='object-scale-up min-h-full w-full object-top'
+                className='object-fit h-full w-full overflow-hidden'
               />
             ) : null}
           </BrowserWindow>
