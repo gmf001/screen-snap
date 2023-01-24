@@ -51,13 +51,13 @@ export const screenshotSchema = z.object({
 export async function getScreenshot(body: Screenshot) {
   try {
     const page = await getPage();
-    await page.goto(body.url, { waitUntil: 'domcontentloaded' });
+    await page.goto(body.url, { waitUntil: 'networkidle0' });
     await page.setViewport({
-      width: Number(body.width) || 1280,
-      height: Number(body.height) || 720,
+      width: Number(body.width) || 1920,
+      height: Number(body.height) || 1080,
       deviceScaleFactor: 2
     });
-    const file = await page.screenshot();
+    const file = await page.screenshot({ captureBeyondViewport: false });
     return file;
   } catch (e) {
     console.log(e);
